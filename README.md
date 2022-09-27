@@ -1,4 +1,4 @@
-# discord-funbot-apcsp
+# funbot-apcsp-node
 
 Join the Repl [here](https://replit.com/join/nwcbfrbokr-midipaolo)
 
