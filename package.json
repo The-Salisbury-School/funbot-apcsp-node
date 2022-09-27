@@ -1,0 +1,28 @@
+{
+  "name": "discord-funbot-apcsp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Salisbury-School/discord-funbot-apcsp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/The-Salisbury-School/discord-funbot-apcsp/issues"
+  },
+  "homepage": "https://github.com/The-Salisbury-School/discord-funbot-apcsp#readme",
+  "dependencies": {
+    "@discordjs/rest": "^1.2.0",
+    "discord.js": "^14.5.0",
+    "rest": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.24.0"
+  }
+}
