@@ -7,7 +7,7 @@ const path = require('node:path');
 
 // discord dependencies
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
-const token = process.env['token'];
+const { token } = require('./config.json');
 
 // create new client instance to start bot and connect to discord api
 // GatewayIntentBits.Guild is a Discord method that gives permissions to the bot
