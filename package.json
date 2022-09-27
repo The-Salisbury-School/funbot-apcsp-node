@@ -1,5 +1,5 @@
 {
-  "name": "discord-funbot-apcsp",
+  "name": "funbot-apcsp-node",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/The-Salisbury-School/discord-funbot-apcsp.git"
+    "url": "git+https://github.com/The-Salisbury-School/funbot-apcsp-node.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/The-Salisbury-School/discord-funbot-apcsp/issues"
+    "url": "https://github.com/The-Salisbury-School/funbot-apcsp-node/issues"
   },
-  "homepage": "https://github.com/The-Salisbury-School/discord-funbot-apcsp#readme",
+  "homepage": "https://github.com/The-Salisbury-School/funbot-apcsp-node#readme",
   "dependencies": {
     "@discordjs/rest": "^1.2.0",
     "discord.js": "^14.5.0",
