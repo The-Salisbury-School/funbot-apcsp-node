@@ -23,10 +23,11 @@ const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'
 for (const file of eventFiles) {
 	const filePath = path.join(eventsPath, file);
 	const event = require(filePath);
-	
+
 	if (event.once) {
 		client.once(event.name, (...args) => event.execute(...args));
-	} else {
+	}
+	else {
 		client.on(event.name, (...args) => event.execute(...args));
 	}
 }
@@ -43,14 +44,14 @@ for (const file of eventFiles) {
 // using .commands property on the client instance allows access to commands in other files
 
 // Collection is a JS Native Map class with additional utility methods. This is used throughout discord.js rather than Arrays for anything that has an ID, for significantly improved performance and ease-of-use.
-//Constructor: new Collection(entries);
+// Constructor: new Collection(entries);
 client.commands = new Collection();
 
 // construct a path and store it in a constant so you can reference it later
 // __dirname is an environment variable that tells you the absolute path of the directory containing the currently executing file.
 //  here, __dirname is '/home/runner/atom-discord-bot'
-const commandsPath = path.join(__dirname, 'commands')
-//so commandsPath now = '/home/runner/atom-discord-bot/commands'
+const commandsPath = path.join(__dirname, 'commands');
+// so commandsPath now = '/home/runner/atom-discord-bot/commands'
 
 // pull an array of all .js files in 'commands' folder
 const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
@@ -58,7 +59,7 @@ const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('
 for (const file of commandFiles) {
 	const filePath = path.join(commandsPath, file);
 	const command = require(filePath);
-	
+
 	// Set a new item in the Collection
 	// With the 'key' @param as a string of command name (from SlashCommandBuilder().setName which has been renamed to 'data' + .name)
 	// and the 'value' @param as the exported module (everything in the module from each command.js file )
@@ -80,7 +81,8 @@ client.on('interactionCreate', async interaction => {
 	// then it will pull the code from 'interaction'
 	try {
 		await command.execute(interaction);
-	} catch (error) {
+	}
+	catch (error) {
 		console.error(error);
 		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
 	}

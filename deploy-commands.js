@@ -6,15 +6,16 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { Routes } = require('discord.js');
 
-//new required dep 'npm install @discordjs/rest'
+// new required dep 'npm install @discordjs/rest'
 const { REST } = require('@discordjs/rest');
 
-//import secrets
-const clientId = process.env['clientId']
+// import secretsn
+// eslint-disable-next-line no-unused-vars
 const { clientId, guildId, token } = require('./config.json');
 
+// eslint-disable-next-line no-inline-comments
 const commands = [// array for building commands: new SlashCommandBuilder().setName('ping').setDescription('Replies with pong!'),
-	]
+];
 // if commands built that way, followed by: .map(command => command.toJSON());
 
 
@@ -46,7 +47,8 @@ const rest = new REST({ version: '10' }).setToken(token);
 		);
 
 		console.log('Successfully reloaded application (/) commands.');
-	} catch (error) {
+	}
+	catch (error) {
 		console.error(error);
 	}
 })();
