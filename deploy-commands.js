@@ -63,6 +63,6 @@ const rest = new REST({ version: '10' }).setToken(token);
 	.catch(console.error); */
 
 // for global commands
-/* rest.delete(Routes.applicationCommand(clientId, 'commandId'))
+rest.delete(Routes.applicationCommand(clientId, 'ping'))
 	.then(() => console.log('Successfully deleted application command'))
-	.catch(console.error); */
+	.catch(console.error);
